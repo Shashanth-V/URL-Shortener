@@ -8,7 +8,7 @@ function UrlList({ urls }) {
       <ul>
         {urls.map((url, index) => (
           <li key={index} style={{ marginBottom: '10px' }}>
-            <div>🔗 <strong>{url.shortUrl}</strong></div>
+            <div>🔗 <a href={url.shortUrl} target="_blank" rel="noopener noreferrer"><strong>{url.shortUrl}</strong></a></div>
             <div>📎 Original: <a href={url.longUrl} target="_blank" rel="noopener noreferrer">{url.longUrl}</a></div>
             <div>🕒 Created: {url.createdAt}</div>
           </li>
